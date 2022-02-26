@@ -8,7 +8,6 @@ Flixster is an app that allows users to browse movies from the [The Movie Databa
 ## Flixster Part 1
 
 ### User Stories
-`TODO://` In the **User Stories section below**, add an `x` in the `-[ ]` like this `- [x]` for any user story you complete. (🚫 Remove this paragraph after after checking off completed user stories)
 
 #### REQUIRED (10pts)
 - [x] (10pts) User can view a list of movies (title, poster image, and overview) currently playing in theaters from the Movie Database API.
@@ -23,12 +22,12 @@ Flixster is an app that allows users to browse movies from the [The Movie Databa
 - [ ] (2pts) For popular movies (i.e. a movie voted for more than 5 stars), the full backdrop image is displayed. Otherwise, a poster image, the movie title, and overview is listed. Use Heterogenous RecyclerViews and use different ViewHolder layout files for popular movies and less popular ones.
 
 ### App Walkthough GIF
-`TODO://` Add the URL to your animated app walkthough `gif` in the image tag below, `YOUR_GIF_URL_HERE`. Make sure the gif actually renders and animates when viewing this README. (🚫 Remove this paragraph after after adding gif)
-
 <img src='walkthrough.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' width=250><br>
 
 ### Notes
 Describe any challenges encountered while building the app.
+
+While first launching my emulator, I had an error I had not seen before. Especially since the previous I had used it it had been working correctly. The error stated that the minCompileSDK (31) was greater than the modules compileSdkVersion (android-30). When I could not find a solution through Google and StackOverflow. I asked a TA from the codepath program for help. They were able to help change the compileSdkVersion and when another error occured afterwards due to a manifest merge error, they were able to help identify what had went wrong and how to fix it. 
 
 ### Open-source libraries used
 
