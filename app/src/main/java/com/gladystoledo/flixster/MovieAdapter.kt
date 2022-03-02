@@ -1,6 +1,7 @@
 package com.gladystoledo.flixster
 
 import android.content.Context
+import android.content.res.Configuration
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -37,7 +38,16 @@ class MovieAdapter(private val context: Context, private val movies: List<Movie>
         fun bind(movie: Movie){
             tvTitle.text = movie.title
             tvOverview.text = movie.overview
-            Glide.with(context).load(movie.posterImageURL).into(ivPoster)
+            val imageURL: String
+            if (context.resources.configuration.orientation == Configuration.ORIENTATION_LANDSCAPE){
+                imageURL = movie.backdropImageURL
+            }else{
+                imageURL = movie.posterImageURL
+            }
+            Glide.with(context)
+                .load(imageURL)
+                .placeholder(R.drawable.ic_nocover)
+                .into(ivPoster)
         }
     }
 
